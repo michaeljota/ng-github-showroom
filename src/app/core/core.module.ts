@@ -7,5 +7,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 @NgModule({
   imports: [CommonModule, RouterModule.forChild([])],
   declarations: [NavbarComponent],
+  exports: [NavbarComponent],
 })
 export class CoreModule {}
