@@ -8,6 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "style": "prettier --config .prettierrc --write \"?(src|e2e)/**/*.?(scss|ts)\"",
     "e2e": "ng e2e"
   },
   "private": true,
