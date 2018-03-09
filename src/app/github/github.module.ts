@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+import { SharedModule } from '../shared/shared.module';
 
 import { GithubRoutingModule } from './github-routing.module';
 
@@ -10,7 +11,7 @@ import { UsersService } from './shared/users.service';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     GithubRoutingModule
   ],
   declarations: [UserListComponent, UserCardComponent, PaginationBarComponent],
