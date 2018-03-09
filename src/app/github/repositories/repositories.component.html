@@ -9,6 +9,7 @@
 <div class="row">
   <app-pagination-bar
     [totalPages]="totalPages"
+    [current]="currentPage"
     (pageChange)="onPageChange($event)"
   ></app-pagination-bar>
 </div>

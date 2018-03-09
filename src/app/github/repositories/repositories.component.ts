@@ -14,6 +14,7 @@ import { RepositoriesService } from '../shared/repositories.service';
 export class RepositoriesComponent implements OnInit {
   repositories: Observable<Repository[]>;
   totalPages: number;
+  currentPage: number;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -36,6 +37,7 @@ export class RepositoriesComponent implements OnInit {
             }
             return +queryParamMap.get('page');
           }),
+          tap(page => (this.currentPage = page)),
         ),
       ),
       map(([repositories, virtualPage]) => {
@@ -47,6 +49,7 @@ export class RepositoriesComponent implements OnInit {
   }
 
   onPageChange(page: number) {
+    this.currentPage = page;
     // changes the route without moving from the current view
     this.router.navigate([], {
       relativeTo: this.route,
