@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { UserListComponent } from './user-list/user-list.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   {
     path: 'list',
     component: UserListComponent,
-  }
+  },
+  {
+    path: 'repositories/:userName',
+    component: RepositoriesComponent,
+  },
 ];
 
 @NgModule({
