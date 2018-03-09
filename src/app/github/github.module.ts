@@ -7,16 +7,19 @@ import { GithubRoutingModule } from './github-routing.module';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { PaginationBarComponent } from './pagination-bar/pagination-bar.component';
+import { RepositoryCardComponent } from './repository-card/repository-card.component';
 
 import { UsersService } from './shared/users.service';
 import { RepositoriesService } from './shared/repositories.service';
 
 @NgModule({
-  imports: [
-    SharedModule,
-    GithubRoutingModule
+  imports: [SharedModule, GithubRoutingModule],
+  declarations: [
+    UserListComponent,
+    UserCardComponent,
+    PaginationBarComponent,
+    RepositoryCardComponent,
   ],
-  declarations: [UserListComponent, UserCardComponent, PaginationBarComponent],
   providers: [UsersService, RepositoriesService],
 })
-export class GithubModule { }
+export class GithubModule {}
