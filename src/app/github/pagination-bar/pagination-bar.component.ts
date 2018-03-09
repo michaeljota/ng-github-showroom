@@ -15,6 +15,10 @@ import {
 export class PaginationBarComponent {
   @Input() totalPages = 1;
   @Input() arrowsOnly = false;
+  @Input()
+  set current(value: number) {
+    this.currentPage = value;
+  }
 
   @Output() pageChange = new EventEmitter<number>();
 
