@@ -1,18 +1,18 @@
 <div class="card">
-  <div class="card-body repository-card">
+  <div class="card-body repository-card d-flex flex-column">
     <h5 class="card-title">{{ repository.name }}</h5>
     <p *ngIf="repository.description">{{ repository.description }}</p>
-    <ul class="list-group list-group-horizontal">
-      <li class="list-group-item">
-        <span class="oi oi-bug" title="issues" aria-hidden="true"></span>
+    <ul class="list-group list-group-horizontal mx-auto mt-auto">
+      <li class="list-group-item d-flex flex-column align-items-center">
+        <span class="oi oi-bug text-danger" title="issues" aria-hidden="true"></span>
         {{ repository.open_issues }}
       </li>
-      <li class="list-group-item">
-        <span class="oi oi-fork" title="forks" aria-hidden="true"></span>
+      <li class="list-group-item d-flex flex-column align-items-center">
+        <span class="oi oi-fork text-success" title="forks" aria-hidden="true"></span>
         {{ repository.forks_count }}
       </li>
-      <li class="list-group-item">
-        <span class="oi oi-star" title="stars" aria-hidden="true"></span>
+      <li class="list-group-item d-flex flex-column align-items-center">
+        <span class="oi oi-star text-primary" title="stars" aria-hidden="true"></span>
         {{ repository.stargazers_count }}
       </li>
     </ul>
