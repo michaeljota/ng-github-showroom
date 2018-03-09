@@ -19,8 +19,7 @@ export class UserListComponent implements OnInit {
   }
 
   onPageChange(page: number) {
-    page = (page - 1 ) * 4;
-    console.log(page);
-    this.users = this.usersServices.getAll(page);
+    const offset = (page - 1 ) * 4;
+    this.users = this.usersServices.getAll(offset);
   }
 }
