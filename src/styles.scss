@@ -2,6 +2,10 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~open-iconic/font/css/open-iconic-bootstrap.css';
 
+.w-24 {
+  width: 24%;
+}
+
 .list-group-horizontal {
   flex-direction: row;
   margin-bottom: 1rem;
