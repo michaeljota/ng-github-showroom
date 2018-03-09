@@ -1,3 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
 @import '~open-iconic/font/css/open-iconic-bootstrap.css';
+
+.list-group-horizontal {
+  flex-direction: row;
+  margin-bottom: 1rem;
+
+  .list-group-item {
+    margin-bottom: 0;
+
+    &:first-of-type {
+      border-radius: 0;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    &:last-of-type {
+      border-radius: 0;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+  }
+}
