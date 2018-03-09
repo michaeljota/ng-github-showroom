@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { UserListComponent } from './user-list/user-list.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'list',
+  },
+  {
+    path: 'list',
+    component: UserListComponent,
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class GithubRoutingModule { }
+export class GithubRoutingModule {}
