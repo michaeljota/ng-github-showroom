@@ -1,0 +1,4 @@
+main {
+  // We meed to calculate the viewport height less the navbar height
+  height: calc(100vh - 56px);
+}
