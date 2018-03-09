@@ -1,0 +1,14 @@
+<div class="row my-auto w-100">
+  <app-repository-card
+    *ngFor="let repo of (repositories | async)"
+    class="w-24 mx-auto"
+    [repository]="repo"
+  >
+  </app-repository-card>
+</div>
+<div class="row">
+  <app-pagination-bar
+    [totalPages]="totalPages"
+    (pageChange)="onPageChange($event)"
+  ></app-pagination-bar>
+</div>
